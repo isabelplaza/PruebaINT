@@ -351,10 +351,10 @@ public class Ipv6SimpleRoutingComponent {
     private synchronized void setUpAllDevices() {
         // Set up host routes
 
-        //deviceId1 = "device:leaf1";
+        //deviceId1 = "device:leaf1-1";
         HostId h1Id = HostId.hostId("00:00:00:00:00:1A/None");
 
-        //deviceId2 = "device:leaf4";
+        //deviceId2 = "device:leaf1-2";
         HostId h2Id = HostId.hostId("00:00:00:00:00:1B/None");
 
         // Set bidirectional path
