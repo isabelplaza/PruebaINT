@@ -160,6 +160,9 @@ header ndp_t {
     bit<48>      target_mac_addr;
 }
 
+//header int_header_t {}
+
+
 // Packet-in header. Prepended to packets sent to the CPU_PORT and used by the
 // P4Runtime server (Stratum) to populate the PacketIn message metadata fields.
 // Here we use it to carry the original ingress port where the packet was
@@ -423,7 +426,7 @@ control IngressPipeImpl (inout parsed_headers_t    hdr,
         counters = direct_counter(CounterType.packets_and_bytes);
     }
 
-
+/*
     // *** TODO EXERCISE 5 (IPV6 ROUTING)
     //
     // 1. Create a table to to handle NDP messages to resolve the MAC address of
@@ -513,7 +516,7 @@ control IngressPipeImpl (inout parsed_headers_t    hdr,
       @name("routing_v6_table_counter")
       counters = direct_counter(CounterType.packets_and_bytes);
     }
-
+*/
 
     // *** TODO EXERCISE 6 (SRV6)
     //
@@ -579,6 +582,7 @@ control IngressPipeImpl (inout parsed_headers_t    hdr,
 
         bool do_l3_l2 = true;
 
+        /*
         if (hdr.icmpv6.isValid() && hdr.icmpv6.type == ICMP6_TYPE_NS) {
             // *** TODO EXERCISE 5
             // Insert logic to handle NDP messages to resolve the MAC address of the
@@ -591,6 +595,7 @@ control IngressPipeImpl (inout parsed_headers_t    hdr,
                         do_l3_l2 = false;
             }
         }
+        */
 
         if (do_l3_l2) {
 
@@ -605,11 +610,13 @@ control IngressPipeImpl (inout parsed_headers_t    hdr,
             // somewhere between checking the switch's my station table and
             // applying the routing table.
 
+            /*
             if (hdr.ipv6.isValid() && my_station_table.apply().hit) {
                routing_v6_table.apply();
                // Check TTL, drop packet if necessary to avoid loops.
                if(hdr.ipv6.hop_limit == 0) { drop(); }
             }
+            */
 
 
             // L2 bridging logic. Apply the exact table first...
