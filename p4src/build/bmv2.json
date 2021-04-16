@@ -202,7 +202,7 @@
       "name" : "fl",
       "source_info" : {
         "filename" : "p4src/main.p4",
-        "line" : 546,
+        "line" : 333,
         "column" : 34,
         "source_fragment" : "{ standard_metadata.ingress_port }"
       },
@@ -514,7 +514,7 @@
       "id" : 0,
       "source_info" : {
         "filename" : "p4src/main.p4",
-        "line" : 699,
+        "line" : 428,
         "column" : 8,
         "source_fragment" : "DeparserImpl"
       },
@@ -528,7 +528,7 @@
       "id" : 0,
       "source_info" : {
         "filename" : "p4src/main.p4",
-        "line" : 403,
+        "line" : 281,
         "column" : 8,
         "source_fragment" : "counters"
       },
@@ -540,7 +540,7 @@
       "id" : 1,
       "source_info" : {
         "filename" : "p4src/main.p4",
-        "line" : 427,
+        "line" : 305,
         "column" : 8,
         "source_fragment" : "counters"
       },
@@ -552,7 +552,7 @@
       "id" : 2,
       "source_info" : {
         "filename" : "p4src/main.p4",
-        "line" : 566,
+        "line" : 353,
         "column" : 8,
         "source_fragment" : "counters"
       },
@@ -585,7 +585,7 @@
           ],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 355,
+            "line" : 233,
             "column" : 8,
             "source_fragment" : "mark_to_drop(standard_metadata)"
           }
@@ -607,7 +607,7 @@
           ],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 355,
+            "line" : 233,
             "column" : 8,
             "source_fragment" : "mark_to_drop(standard_metadata)"
           }
@@ -629,7 +629,7 @@
           ],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 355,
+            "line" : 233,
             "column" : 8,
             "source_fragment" : "mark_to_drop(standard_metadata)"
           }
@@ -660,7 +660,7 @@
           ],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 387,
+            "line" : 265,
             "column" : 8,
             "source_fragment" : "standard_metadata.egress_spec = port_num"
           }
@@ -691,7 +691,7 @@
           ],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 413,
+            "line" : 291,
             "column" : 8,
             "source_fragment" : "standard_metadata.mcast_grp = gid"
           }
@@ -720,7 +720,7 @@
           ],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 414,
+            "line" : 292,
             "column" : 8,
             "source_fragment" : "local_metadata.is_multicast = true"
           }
@@ -746,7 +746,7 @@
           ],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 538,
+            "line" : 325,
             "column" : 8,
             "source_fragment" : "standard_metadata.egress_spec = 255"
           }
@@ -772,7 +772,7 @@
           ],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 546,
+            "line" : 333,
             "column" : 8,
             "source_fragment" : "clone3(CloneType.I2E, 99, { standard_metadata.ingress_port })"
           }
@@ -798,7 +798,7 @@
           ],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 579,
+            "line" : 366,
             "column" : 12,
             "source_fragment" : "standard_metadata.egress_spec = hdr.cpu_out.egress_port"
           }
@@ -813,7 +813,7 @@
           ],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 580,
+            "line" : 367,
             "column" : 12,
             "source_fragment" : "hdr.cpu_out.setInvalid()"
           }
@@ -823,7 +823,7 @@
           "parameters" : [],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 581,
+            "line" : 368,
             "column" : 12,
             "source_fragment" : "exit"
           }
@@ -905,7 +905,7 @@
           ],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 651,
+            "line" : 404,
             "column" : 12,
             "source_fragment" : "hdr.cpu_in.setValid()"
           }
@@ -924,7 +924,7 @@
           ],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 652,
+            "line" : 405,
             "column" : 12,
             "source_fragment" : "hdr.cpu_in.ingress_port = standard_metadata.ingress_port"
           }
@@ -934,7 +934,7 @@
           "parameters" : [],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 653,
+            "line" : 406,
             "column" : 12,
             "source_fragment" : "exit"
           }
@@ -956,7 +956,7 @@
           ],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 662,
+            "line" : 415,
             "column" : 12,
             "source_fragment" : "mark_to_drop(standard_metadata)"
           }
@@ -970,7 +970,7 @@
       "id" : 0,
       "source_info" : {
         "filename" : "p4src/main.p4",
-        "line" : 349,
+        "line" : 227,
         "column" : 8,
         "source_fragment" : "IngressPipeImpl"
       },
@@ -981,7 +981,7 @@
           "id" : 0,
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 579,
+            "line" : 366,
             "column" : 42,
             "source_fragment" : "= hdr.cpu_out.egress_port; ..."
           },
@@ -1010,7 +1010,7 @@
           "id" : 1,
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 390,
+            "line" : 268,
             "column" : 10,
             "source_fragment" : "l2_exact_table"
           },
@@ -1093,7 +1093,7 @@
           "id" : 4,
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 417,
+            "line" : 295,
             "column" : 10,
             "source_fragment" : "l2_ternary_table"
           },
@@ -1130,7 +1130,7 @@
           "id" : 5,
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 549,
+            "line" : 336,
             "column" : 10,
             "source_fragment" : "acl_table"
           },
@@ -1214,7 +1214,7 @@
           "id" : 0,
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 571,
+            "line" : 358,
             "column" : 12,
             "source_fragment" : "hdr.cpu_out.isValid()"
           },
@@ -1237,7 +1237,7 @@
           "id" : 1,
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 624,
+            "line" : 377,
             "column" : 16,
             "source_fragment" : "!l2_exact_table.apply().hit"
           },
@@ -1269,7 +1269,7 @@
       "id" : 1,
       "source_info" : {
         "filename" : "p4src/main.p4",
-        "line" : 637,
+        "line" : 390,
         "column" : 8,
         "source_fragment" : "EgressPipeImpl"
       },
@@ -1280,7 +1280,7 @@
           "id" : 6,
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 651,
+            "line" : 404,
             "column" : 12,
             "source_fragment" : "hdr.cpu_in.setValid(); ..."
           },
@@ -1309,7 +1309,7 @@
           "id" : 7,
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 662,
+            "line" : 415,
             "column" : 12,
             "source_fragment" : "mark_to_drop(standard_metadata)"
           },
@@ -1341,7 +1341,7 @@
           "id" : 2,
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 642,
+            "line" : 395,
             "column" : 12,
             "source_fragment" : "standard_metadata.egress_port == 255"
           },
@@ -1367,7 +1367,7 @@
           "id" : 3,
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 660,
+            "line" : 413,
             "column" : 12,
             "source_fragment" : "local_metadata.is_multicast == true && ..."
           },
