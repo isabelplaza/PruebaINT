@@ -4,8 +4,6 @@
       "name" : "scalars_0",
       "id" : 0,
       "fields" : [
-        ["tmp_0", 1, false],
-        ["tmp_1", 1, false],
         ["tmp", 1, false],
         ["local_metadata_t.l4_src_port", 16, false],
         ["local_metadata_t.l4_dst_port", 16, false],
@@ -13,7 +11,7 @@
         ["local_metadata_t.next_srv6_sid", 128, false],
         ["local_metadata_t.ip_proto", 8, false],
         ["local_metadata_t.icmp_type", 8, false],
-        ["_padding_0", 4, false]
+        ["_padding_0", 6, false]
       ]
     },
     {
@@ -90,35 +88,8 @@
       ]
     },
     {
-      "name" : "ipv6_t",
-      "id" : 6,
-      "fields" : [
-        ["version", 4, false],
-        ["traffic_class", 8, false],
-        ["flow_label", 20, false],
-        ["payload_len", 16, false],
-        ["next_hdr", 8, false],
-        ["hop_limit", 8, false],
-        ["src_addr", 128, false],
-        ["dst_addr", 128, false]
-      ]
-    },
-    {
-      "name" : "srv6h_t",
-      "id" : 7,
-      "fields" : [
-        ["next_hdr", 8, false],
-        ["hdr_ext_len", 8, false],
-        ["routing_type", 8, false],
-        ["segment_left", 8, false],
-        ["last_entry", 8, false],
-        ["flags", 8, false],
-        ["tag", 16, false]
-      ]
-    },
-    {
       "name" : "tcp_t",
-      "id" : 8,
+      "id" : 6,
       "fields" : [
         ["src_port", 16, false],
         ["dst_port", 16, false],
@@ -135,7 +106,7 @@
     },
     {
       "name" : "udp_t",
-      "id" : 9,
+      "id" : 7,
       "fields" : [
         ["src_port", 16, false],
         ["dst_port", 16, false],
@@ -145,7 +116,7 @@
     },
     {
       "name" : "icmp_t",
-      "id" : 10,
+      "id" : 8,
       "fields" : [
         ["type", 8, false],
         ["icmp_code", 8, false],
@@ -153,33 +124,6 @@
         ["identifier", 16, false],
         ["sequence_number", 16, false],
         ["timestamp", 64, false]
-      ]
-    },
-    {
-      "name" : "icmpv6_t",
-      "id" : 11,
-      "fields" : [
-        ["type", 8, false],
-        ["code", 8, false],
-        ["checksum", 16, false]
-      ]
-    },
-    {
-      "name" : "ndp_t",
-      "id" : 12,
-      "fields" : [
-        ["flags", 32, false],
-        ["target_ipv6_addr", 128, false],
-        ["type", 8, false],
-        ["length", 8, false],
-        ["target_mac_addr", 48, false]
-      ]
-    },
-    {
-      "name" : "srv6_list_t",
-      "id" : 13,
-      "fields" : [
-        ["segment_id", 128, false]
       ]
     }
   ],
@@ -227,92 +171,28 @@
       "pi_omit" : true
     },
     {
-      "name" : "ipv6",
-      "id" : 6,
-      "header_type" : "ipv6_t",
-      "metadata" : false,
-      "pi_omit" : true
-    },
-    {
-      "name" : "srv6h",
-      "id" : 7,
-      "header_type" : "srv6h_t",
-      "metadata" : false,
-      "pi_omit" : true
-    },
-    {
       "name" : "tcp",
-      "id" : 8,
+      "id" : 6,
       "header_type" : "tcp_t",
       "metadata" : false,
       "pi_omit" : true
     },
     {
       "name" : "udp",
-      "id" : 9,
+      "id" : 7,
       "header_type" : "udp_t",
       "metadata" : false,
       "pi_omit" : true
     },
     {
       "name" : "icmp",
-      "id" : 10,
+      "id" : 8,
       "header_type" : "icmp_t",
       "metadata" : false,
       "pi_omit" : true
-    },
-    {
-      "name" : "icmpv6",
-      "id" : 11,
-      "header_type" : "icmpv6_t",
-      "metadata" : false,
-      "pi_omit" : true
-    },
-    {
-      "name" : "ndp",
-      "id" : 12,
-      "header_type" : "ndp_t",
-      "metadata" : false,
-      "pi_omit" : true
-    },
-    {
-      "name" : "srv6_list[0]",
-      "id" : 13,
-      "header_type" : "srv6_list_t",
-      "metadata" : false,
-      "pi_omit" : true
-    },
-    {
-      "name" : "srv6_list[1]",
-      "id" : 14,
-      "header_type" : "srv6_list_t",
-      "metadata" : false,
-      "pi_omit" : true
-    },
-    {
-      "name" : "srv6_list[2]",
-      "id" : 15,
-      "header_type" : "srv6_list_t",
-      "metadata" : false,
-      "pi_omit" : true
-    },
-    {
-      "name" : "srv6_list[3]",
-      "id" : 16,
-      "header_type" : "srv6_list_t",
-      "metadata" : false,
-      "pi_omit" : true
     }
   ],
-  "header_stacks" : [
-    {
-      "name" : "srv6_list",
-      "id" : 0,
-      "header_type" : "srv6_list_t",
-      "size" : 4,
-      "header_ids" : [13, 14, 15, 16]
-    }
-  ],
+  "header_stacks" : [],
   "header_union_types" : [],
   "header_unions" : [],
   "header_union_stacks" : [],
@@ -322,7 +202,7 @@
       "name" : "fl",
       "source_info" : {
         "filename" : "p4src/main.p4",
-        "line" : 545,
+        "line" : 546,
         "column" : 34,
         "source_fragment" : "{ standard_metadata.ingress_port }"
       },
@@ -419,12 +299,6 @@
               "next_state" : "parse_ipv4"
             },
             {
-              "type" : "hexstr",
-              "value" : "0x86dd",
-              "mask" : null,
-              "next_state" : "parse_ipv6"
-            },
-            {
               "value" : "default",
               "mask" : null,
               "next_state" : null
@@ -497,73 +371,8 @@
           ]
         },
         {
-          "name" : "parse_ipv6",
-          "id" : 4,
-          "parser_ops" : [
-            {
-              "parameters" : [
-                {
-                  "type" : "regular",
-                  "value" : "ipv6"
-                }
-              ],
-              "op" : "extract"
-            },
-            {
-              "parameters" : [
-                {
-                  "type" : "field",
-                  "value" : ["scalars", "local_metadata_t.ip_proto"]
-                },
-                {
-                  "type" : "field",
-                  "value" : ["ipv6", "next_hdr"]
-                }
-              ],
-              "op" : "set"
-            }
-          ],
-          "transitions" : [
-            {
-              "type" : "hexstr",
-              "value" : "0x06",
-              "mask" : null,
-              "next_state" : "parse_tcp"
-            },
-            {
-              "type" : "hexstr",
-              "value" : "0x11",
-              "mask" : null,
-              "next_state" : "parse_udp"
-            },
-            {
-              "type" : "hexstr",
-              "value" : "0x3a",
-              "mask" : null,
-              "next_state" : "parse_icmpv6"
-            },
-            {
-              "type" : "hexstr",
-              "value" : "0x2b",
-              "mask" : null,
-              "next_state" : "parse_srv6"
-            },
-            {
-              "value" : "default",
-              "mask" : null,
-              "next_state" : null
-            }
-          ],
-          "transition_key" : [
-            {
-              "type" : "field",
-              "value" : ["ipv6", "next_hdr"]
-            }
-          ]
-        },
-        {
           "name" : "parse_tcp",
-          "id" : 5,
+          "id" : 4,
           "parser_ops" : [
             {
               "parameters" : [
@@ -612,7 +421,7 @@
         },
         {
           "name" : "parse_udp",
-          "id" : 6,
+          "id" : 5,
           "parser_ops" : [
             {
               "parameters" : [
@@ -661,7 +470,7 @@
         },
         {
           "name" : "parse_icmp",
-          "id" : 7,
+          "id" : 6,
           "parser_ops" : [
             {
               "parameters" : [
@@ -694,365 +503,6 @@
             }
           ],
           "transition_key" : []
-        },
-        {
-          "name" : "parse_icmpv6",
-          "id" : 8,
-          "parser_ops" : [
-            {
-              "parameters" : [
-                {
-                  "type" : "regular",
-                  "value" : "icmpv6"
-                }
-              ],
-              "op" : "extract"
-            },
-            {
-              "parameters" : [
-                {
-                  "type" : "field",
-                  "value" : ["scalars", "local_metadata_t.icmp_type"]
-                },
-                {
-                  "type" : "field",
-                  "value" : ["icmpv6", "type"]
-                }
-              ],
-              "op" : "set"
-            }
-          ],
-          "transitions" : [
-            {
-              "type" : "hexstr",
-              "value" : "0x87",
-              "mask" : null,
-              "next_state" : "parse_ndp"
-            },
-            {
-              "type" : "hexstr",
-              "value" : "0x88",
-              "mask" : null,
-              "next_state" : "parse_ndp"
-            },
-            {
-              "value" : "default",
-              "mask" : null,
-              "next_state" : null
-            }
-          ],
-          "transition_key" : [
-            {
-              "type" : "field",
-              "value" : ["icmpv6", "type"]
-            }
-          ]
-        },
-        {
-          "name" : "parse_ndp",
-          "id" : 9,
-          "parser_ops" : [
-            {
-              "parameters" : [
-                {
-                  "type" : "regular",
-                  "value" : "ndp"
-                }
-              ],
-              "op" : "extract"
-            }
-          ],
-          "transitions" : [
-            {
-              "value" : "default",
-              "mask" : null,
-              "next_state" : null
-            }
-          ],
-          "transition_key" : []
-        },
-        {
-          "name" : "parse_srv6",
-          "id" : 10,
-          "parser_ops" : [
-            {
-              "parameters" : [
-                {
-                  "type" : "regular",
-                  "value" : "srv6h"
-                }
-              ],
-              "op" : "extract"
-            }
-          ],
-          "transitions" : [
-            {
-              "value" : "default",
-              "mask" : null,
-              "next_state" : "parse_srv6_list"
-            }
-          ],
-          "transition_key" : []
-        },
-        {
-          "name" : "parse_srv6_list",
-          "id" : 11,
-          "parser_ops" : [
-            {
-              "parameters" : [
-                {
-                  "type" : "stack",
-                  "value" : "srv6_list"
-                }
-              ],
-              "op" : "extract"
-            },
-            {
-              "parameters" : [
-                {
-                  "type" : "field",
-                  "value" : ["scalars", "tmp_0"]
-                },
-                {
-                  "type" : "expression",
-                  "value" : {
-                    "type" : "expression",
-                    "value" : {
-                      "op" : "?",
-                      "left" : {
-                        "type" : "hexstr",
-                        "value" : "0x01"
-                      },
-                      "right" : {
-                        "type" : "hexstr",
-                        "value" : "0x00"
-                      },
-                      "cond" : {
-                        "type" : "expression",
-                        "value" : {
-                          "op" : "==",
-                          "left" : {
-                            "type" : "expression",
-                            "value" : {
-                              "op" : "&",
-                              "left" : {
-                                "type" : "expression",
-                                "value" : {
-                                  "op" : "+",
-                                  "left" : {
-                                    "type" : "expression",
-                                    "value" : {
-                                      "op" : "&",
-                                      "left" : {
-                                        "type" : "field",
-                                        "value" : ["srv6h", "segment_left"]
-                                      },
-                                      "right" : {
-                                        "type" : "hexstr",
-                                        "value" : "0xffffffff"
-                                      }
-                                    }
-                                  },
-                                  "right" : {
-                                    "type" : "hexstr",
-                                    "value" : "0xffffffff"
-                                  }
-                                }
-                              },
-                              "right" : {
-                                "type" : "hexstr",
-                                "value" : "0xffffffff"
-                              }
-                            }
-                          },
-                          "right" : {
-                            "type" : "expression",
-                            "value" : {
-                              "op" : "last_stack_index",
-                              "left" : null,
-                              "right" : {
-                                "type" : "header_stack",
-                                "value" : "srv6_list"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              ],
-              "op" : "set"
-            }
-          ],
-          "transitions" : [
-            {
-              "type" : "hexstr",
-              "value" : "0x01",
-              "mask" : null,
-              "next_state" : "mark_current_srv6"
-            },
-            {
-              "value" : "default",
-              "mask" : null,
-              "next_state" : "check_last_srv6"
-            }
-          ],
-          "transition_key" : [
-            {
-              "type" : "field",
-              "value" : ["scalars", "tmp_0"]
-            }
-          ]
-        },
-        {
-          "name" : "mark_current_srv6",
-          "id" : 12,
-          "parser_ops" : [
-            {
-              "parameters" : [
-                {
-                  "type" : "field",
-                  "value" : ["scalars", "local_metadata_t.next_srv6_sid"]
-                },
-                {
-                  "type" : "expression",
-                  "value" : {
-                    "type" : "stack_field",
-                    "value" : ["srv6_list", "segment_id"]
-                  }
-                }
-              ],
-              "op" : "set"
-            }
-          ],
-          "transitions" : [
-            {
-              "value" : "default",
-              "mask" : null,
-              "next_state" : "check_last_srv6"
-            }
-          ],
-          "transition_key" : []
-        },
-        {
-          "name" : "check_last_srv6",
-          "id" : 13,
-          "parser_ops" : [
-            {
-              "parameters" : [
-                {
-                  "type" : "field",
-                  "value" : ["scalars", "tmp_1"]
-                },
-                {
-                  "type" : "expression",
-                  "value" : {
-                    "type" : "expression",
-                    "value" : {
-                      "op" : "?",
-                      "left" : {
-                        "type" : "hexstr",
-                        "value" : "0x01"
-                      },
-                      "right" : {
-                        "type" : "hexstr",
-                        "value" : "0x00"
-                      },
-                      "cond" : {
-                        "type" : "expression",
-                        "value" : {
-                          "op" : "==",
-                          "left" : {
-                            "type" : "expression",
-                            "value" : {
-                              "op" : "&",
-                              "left" : {
-                                "type" : "field",
-                                "value" : ["srv6h", "last_entry"]
-                              },
-                              "right" : {
-                                "type" : "hexstr",
-                                "value" : "0xffffffff"
-                              }
-                            }
-                          },
-                          "right" : {
-                            "type" : "expression",
-                            "value" : {
-                              "op" : "last_stack_index",
-                              "left" : null,
-                              "right" : {
-                                "type" : "header_stack",
-                                "value" : "srv6_list"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              ],
-              "op" : "set"
-            }
-          ],
-          "transitions" : [
-            {
-              "type" : "hexstr",
-              "value" : "0x01",
-              "mask" : null,
-              "next_state" : "parse_srv6_next_hdr"
-            },
-            {
-              "type" : "hexstr",
-              "value" : "0x00",
-              "mask" : null,
-              "next_state" : "parse_srv6_list"
-            }
-          ],
-          "transition_key" : [
-            {
-              "type" : "field",
-              "value" : ["scalars", "tmp_1"]
-            }
-          ]
-        },
-        {
-          "name" : "parse_srv6_next_hdr",
-          "id" : 14,
-          "parser_ops" : [],
-          "transitions" : [
-            {
-              "type" : "hexstr",
-              "value" : "0x06",
-              "mask" : null,
-              "next_state" : "parse_tcp"
-            },
-            {
-              "type" : "hexstr",
-              "value" : "0x11",
-              "mask" : null,
-              "next_state" : "parse_udp"
-            },
-            {
-              "type" : "hexstr",
-              "value" : "0x3a",
-              "mask" : null,
-              "next_state" : "parse_icmpv6"
-            },
-            {
-              "value" : "default",
-              "mask" : null,
-              "next_state" : null
-            }
-          ],
-          "transition_key" : [
-            {
-              "type" : "field",
-              "value" : ["srv6h", "next_hdr"]
-            }
-          ]
         }
       ]
     }
@@ -1064,11 +514,11 @@
       "id" : 0,
       "source_info" : {
         "filename" : "p4src/main.p4",
-        "line" : 696,
+        "line" : 699,
         "column" : 8,
         "source_fragment" : "DeparserImpl"
       },
-      "order" : ["cpu_in", "ethernet", "ipv4", "ipv6", "srv6h", "srv6_list[0]", "srv6_list[1]", "srv6_list[2]", "srv6_list[3]", "tcp", "udp", "icmp", "icmpv6", "ndp"]
+      "order" : ["cpu_in", "ethernet", "ipv4", "tcp", "udp", "icmp"]
     }
   ],
   "meter_arrays" : [],
@@ -1078,7 +528,7 @@
       "id" : 0,
       "source_info" : {
         "filename" : "p4src/main.p4",
-        "line" : 402,
+        "line" : 403,
         "column" : 8,
         "source_fragment" : "counters"
       },
@@ -1090,7 +540,7 @@
       "id" : 1,
       "source_info" : {
         "filename" : "p4src/main.p4",
-        "line" : 426,
+        "line" : 427,
         "column" : 8,
         "source_fragment" : "counters"
       },
@@ -1102,7 +552,7 @@
       "id" : 2,
       "source_info" : {
         "filename" : "p4src/main.p4",
-        "line" : 565,
+        "line" : 566,
         "column" : 8,
         "source_fragment" : "counters"
       },
@@ -1111,70 +561,7 @@
     }
   ],
   "register_arrays" : [],
-  "calculations" : [
-    {
-      "name" : "calc",
-      "id" : 0,
-      "source_info" : {
-        "filename" : "p4src/main.p4",
-        "line" : 674,
-        "column" : 8,
-        "source_fragment" : "update_checksum(hdr.ndp.isValid(), ..."
-      },
-      "algo" : "csum16",
-      "input" : [
-        {
-          "type" : "field",
-          "value" : ["ipv6", "src_addr"]
-        },
-        {
-          "type" : "field",
-          "value" : ["ipv6", "dst_addr"]
-        },
-        {
-          "type" : "field",
-          "value" : ["ipv6", "payload_len"]
-        },
-        {
-          "type" : "hexstr",
-          "value" : "0x00",
-          "bitwidth" : 8
-        },
-        {
-          "type" : "field",
-          "value" : ["ipv6", "next_hdr"]
-        },
-        {
-          "type" : "field",
-          "value" : ["icmpv6", "type"]
-        },
-        {
-          "type" : "field",
-          "value" : ["icmpv6", "code"]
-        },
-        {
-          "type" : "field",
-          "value" : ["ndp", "flags"]
-        },
-        {
-          "type" : "field",
-          "value" : ["ndp", "target_ipv6_addr"]
-        },
-        {
-          "type" : "field",
-          "value" : ["ndp", "type"]
-        },
-        {
-          "type" : "field",
-          "value" : ["ndp", "length"]
-        },
-        {
-          "type" : "field",
-          "value" : ["ndp", "target_mac_addr"]
-        }
-      ]
-    }
-  ],
+  "calculations" : [],
   "learn_lists" : [],
   "actions" : [
     {
@@ -1198,7 +585,7 @@
           ],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 354,
+            "line" : 355,
             "column" : 8,
             "source_fragment" : "mark_to_drop(standard_metadata)"
           }
@@ -1220,7 +607,7 @@
           ],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 354,
+            "line" : 355,
             "column" : 8,
             "source_fragment" : "mark_to_drop(standard_metadata)"
           }
@@ -1242,7 +629,7 @@
           ],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 354,
+            "line" : 355,
             "column" : 8,
             "source_fragment" : "mark_to_drop(standard_metadata)"
           }
@@ -1273,7 +660,7 @@
           ],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 386,
+            "line" : 387,
             "column" : 8,
             "source_fragment" : "standard_metadata.egress_spec = port_num"
           }
@@ -1304,7 +691,7 @@
           ],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 412,
+            "line" : 413,
             "column" : 8,
             "source_fragment" : "standard_metadata.mcast_grp = gid"
           }
@@ -1333,7 +720,7 @@
           ],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 413,
+            "line" : 414,
             "column" : 8,
             "source_fragment" : "local_metadata.is_multicast = true"
           }
@@ -1359,7 +746,7 @@
           ],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 537,
+            "line" : 538,
             "column" : 8,
             "source_fragment" : "standard_metadata.egress_spec = 255"
           }
@@ -1385,7 +772,7 @@
           ],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 545,
+            "line" : 546,
             "column" : 8,
             "source_fragment" : "clone3(CloneType.I2E, 99, { standard_metadata.ingress_port })"
           }
@@ -1411,7 +798,7 @@
           ],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 578,
+            "line" : 579,
             "column" : 12,
             "source_fragment" : "standard_metadata.egress_spec = hdr.cpu_out.egress_port"
           }
@@ -1426,7 +813,7 @@
           ],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 579,
+            "line" : 580,
             "column" : 12,
             "source_fragment" : "hdr.cpu_out.setInvalid()"
           }
@@ -1436,7 +823,7 @@
           "parameters" : [],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 580,
+            "line" : 581,
             "column" : 12,
             "source_fragment" : "exit"
           }
@@ -1518,7 +905,7 @@
           ],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 650,
+            "line" : 651,
             "column" : 12,
             "source_fragment" : "hdr.cpu_in.setValid()"
           }
@@ -1537,7 +924,7 @@
           ],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 651,
+            "line" : 652,
             "column" : 12,
             "source_fragment" : "hdr.cpu_in.ingress_port = standard_metadata.ingress_port"
           }
@@ -1547,7 +934,7 @@
           "parameters" : [],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 652,
+            "line" : 653,
             "column" : 12,
             "source_fragment" : "exit"
           }
@@ -1569,7 +956,7 @@
           ],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 661,
+            "line" : 662,
             "column" : 12,
             "source_fragment" : "mark_to_drop(standard_metadata)"
           }
@@ -1583,7 +970,7 @@
       "id" : 0,
       "source_info" : {
         "filename" : "p4src/main.p4",
-        "line" : 348,
+        "line" : 349,
         "column" : 8,
         "source_fragment" : "IngressPipeImpl"
       },
@@ -1594,7 +981,7 @@
           "id" : 0,
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 578,
+            "line" : 579,
             "column" : 42,
             "source_fragment" : "= hdr.cpu_out.egress_port; ..."
           },
@@ -1623,7 +1010,7 @@
           "id" : 1,
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 389,
+            "line" : 390,
             "column" : 10,
             "source_fragment" : "l2_exact_table"
           },
@@ -1706,7 +1093,7 @@
           "id" : 4,
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 416,
+            "line" : 417,
             "column" : 10,
             "source_fragment" : "l2_ternary_table"
           },
@@ -1743,7 +1130,7 @@
           "id" : 5,
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 548,
+            "line" : 549,
             "column" : 10,
             "source_fragment" : "acl_table"
           },
@@ -1827,7 +1214,7 @@
           "id" : 0,
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 570,
+            "line" : 571,
             "column" : 12,
             "source_fragment" : "hdr.cpu_out.isValid()"
           },
@@ -1850,7 +1237,7 @@
           "id" : 1,
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 623,
+            "line" : 624,
             "column" : 16,
             "source_fragment" : "!l2_exact_table.apply().hit"
           },
@@ -1882,7 +1269,7 @@
       "id" : 1,
       "source_info" : {
         "filename" : "p4src/main.p4",
-        "line" : 636,
+        "line" : 637,
         "column" : 8,
         "source_fragment" : "EgressPipeImpl"
       },
@@ -1893,7 +1280,7 @@
           "id" : 6,
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 650,
+            "line" : 651,
             "column" : 12,
             "source_fragment" : "hdr.cpu_in.setValid(); ..."
           },
@@ -1922,7 +1309,7 @@
           "id" : 7,
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 661,
+            "line" : 662,
             "column" : 12,
             "source_fragment" : "mark_to_drop(standard_metadata)"
           },
@@ -1954,7 +1341,7 @@
           "id" : 2,
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 641,
+            "line" : 642,
             "column" : 12,
             "source_fragment" : "standard_metadata.egress_port == 255"
           },
@@ -1980,7 +1367,7 @@
           "id" : 3,
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 659,
+            "line" : 660,
             "column" : 12,
             "source_fragment" : "local_metadata.is_multicast == true && ..."
           },
@@ -2031,34 +1418,7 @@
       ]
     }
   ],
-  "checksums" : [
-    {
-      "name" : "cksum",
-      "id" : 0,
-      "source_info" : {
-        "filename" : "p4src/main.p4",
-        "line" : 674,
-        "column" : 8,
-        "source_fragment" : "update_checksum(hdr.ndp.isValid(), ..."
-      },
-      "target" : ["icmpv6", "checksum"],
-      "type" : "generic",
-      "calculation" : "calc",
-      "verify" : false,
-      "update" : true,
-      "if_cond" : {
-        "type" : "expression",
-        "value" : {
-          "op" : "d2b",
-          "left" : null,
-          "right" : {
-            "type" : "field",
-            "value" : ["ndp", "$valid$"]
-          }
-        }
-      }
-    }
-  ],
+  "checksums" : [],
   "force_arith" : [],
   "extern_instances" : [],
   "field_aliases" : [
