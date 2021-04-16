@@ -33,3 +33,5 @@ E0416 10:47:04.292109   110 bmv2_switch.cc:189] StratumErrorSpace::ERR_INTERNAL:
 E0416 10:47:04.292249   110 bmv2_switch.cc:189] StratumErrorSpace::ERR_INTERNAL: Not supported yet
 I0416 10:47:04.396418   102 p4_service.cc:696] Controller (connection_id: 1, election_id: 40, uri: ipv4:172.21.0.3:59440) is connected as MASTER for node (aka device) with ID 1.
 I0416 10:47:04.490554   103 config_monitoring_service.cc:377] Initial Subscribe request from ipv4:172.21.0.3:59444 over stream 0x7f2033ffe510.
+I0416 10:51:40.235231   102 p4_service.cc:723] Controller (connection_id: 1, election_id: 40, uri: ipv4:172.21.0.3:59440) which was MASTER for node (aka device) with ID 1 is disconnected. The node is now orphan :(
+I0416 10:51:40.235401   103 config_monitoring_service.cc:569] Subscribe stream 0x7f2033ffe510 from ipv4:172.21.0.3:59444 has been closed.
