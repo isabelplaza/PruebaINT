@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16d80025-0a24-41c4-9c4c-754084f845d8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/p4src/main.p4" beforeDir="false" afterPath="$PROJECT_DIR$/p4src/main.p4" afterDir="false" />
+    <list default="true" id="16d80025-0a24-41c4-9c4c-754084f845d8" name="Default Changelist" comment="Version 2.3 - NO INT - P4 simplificado (NO IPv6) - borrado">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/onosproject/ngsdn/tutorial/Ipv6SimpleRoutingComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/onosproject/ngsdn/tutorial/Ipv6SimpleRoutingComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/bmv2.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/bmv2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/resources/p4info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/p4info.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/target/ngsdn-tutorial-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/target/ngsdn-tutorial-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/target/ngsdn-tutorial-1.0-SNAPSHOT.oar" beforeDir="false" afterPath="$PROJECT_DIR$/app/target/ngsdn-tutorial-1.0-SNAPSHOT.oar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/leaf1/pipe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/leaf1/pipe.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/leaf1/stratum_bmv2.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/leaf1/stratum_bmv2.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/leaf1/write-reqs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/leaf1/write-reqs.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618567194646</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Version 2.3 - NO INT - P4 simplificado (NO IPv6) - borrado">
+      <created>1618567648312</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1618567648312</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -87,6 +102,7 @@
     <MESSAGE value="Version 2 - NO INT - 2 switches 2 hosts, SÍ funcionan pings" />
     <MESSAGE value="Version 2.1 - NO INT - P4 simplificado" />
     <MESSAGE value="Version 2.2 - NO INT - P4 simplificado (NO IPv6) - comentado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 2.2 - NO INT - P4 simplificado (NO IPv6) - comentado" />
+    <MESSAGE value="Version 2.3 - NO INT - P4 simplificado (NO IPv6) - borrado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 2.3 - NO INT - P4 simplificado (NO IPv6) - borrado" />
   </component>
 </project>

@@ -12,10 +12,6 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
- * Modified by David Franco
- * I2T Research Group
- * University of the Basque Country UPV/EHU
  */
 
 package org.onosproject.ngsdn.tutorial;
@@ -305,6 +301,17 @@ public class Ipv6SimpleRoutingComponent {
         Host src = hostService.getHost(srcId);
         Host dst = hostService.getHost(dstId);
 
+        // Check if hosts are located at the same switch
+        log.info("Src switch id={} and Dst switch id={}",src.location().deviceId(), dst.location().deviceId());
+        if (src.location().deviceId().toString().equals(dst.location().deviceId().toString())) {
+            PortNumber outPort = dst.location().port();
+            DeviceId devId = dst.location().deviceId();
+            FlowRule nextHopRule = createL2NextHopRule(devId, dst.mac(), outPort);
+            flowRuleService.applyFlowRules(nextHopRule);
+            log.info("Hosts in the same switch");
+            return;
+        }
+
         // Get all the available paths between two given hosts
         // A path is a collection of links
         Set<Path> paths = topologyService.getPaths(topologyService.currentTopology(),
@@ -351,15 +358,14 @@ public class Ipv6SimpleRoutingComponent {
     private synchronized void setUpAllDevices() {
         // Set up host routes
 
-        //deviceId1 = "device:leaf1-1";
-        HostId h1Id = HostId.hostId("00:00:00:00:00:1A/None");
+        //deviceId1 = "device:leaf1";
+        HostId h1aId = HostId.hostId("00:00:00:00:00:1A/None");
+        HostId h1bId = HostId.hostId("00:00:00:00:00:1B/None");
 
-        //deviceId2 = "device:leaf1-2";
-        HostId h2Id = HostId.hostId("00:00:00:00:00:1B/None");
 
         // Set bidirectional path
-        setUpPath(h1Id, h2Id);
-        setUpPath(h2Id, h1Id);
+        setUpPath(h1aId, h1bId);
+        setUpPath(h1bId, h1aId);
 
 
     }
