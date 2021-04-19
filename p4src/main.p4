@@ -110,7 +110,9 @@ header icmp_t {
     bit<64>  timestamp;
 }
 
-//header int_header_t {}
+header int_t {
+    bit<64>  egress_timestamp;
+}
 
 
 // Packet-in header. Prepended to packets sent to the CPU_PORT and used by the
@@ -138,6 +140,7 @@ struct parsed_headers_t {
     cpu_in_header_t cpu_in;
     ethernet_t ethernet;
     ipv4_t ipv4;
+    int_t int_header;
     tcp_t tcp;
     udp_t udp;
     icmp_t icmp;
@@ -392,6 +395,9 @@ control EgressPipeImpl (inout parsed_headers_t hdr,
                         inout standard_metadata_t standard_metadata) {
     apply {
 
+        hdr.int_header.egress_timestamp = (bit<64>) standard_metadata.egress_global_timestamp;
+        hdr.int_header.setValid();
+
         if (standard_metadata.egress_port == CPU_PORT) {
             // *** TODO EXERCISE 4
             // Implement logic such that if the packet is to be forwarded to the
@@ -430,6 +436,7 @@ control DeparserImpl(packet_out packet, in parsed_headers_t hdr) {
         packet.emit(hdr.cpu_in);
         packet.emit(hdr.ethernet);
         packet.emit(hdr.ipv4);
+        packet.emit(hdr.int_header);
         packet.emit(hdr.tcp);
         packet.emit(hdr.udp);
         packet.emit(hdr.icmp);
