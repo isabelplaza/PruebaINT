@@ -50,6 +50,7 @@ const bit<16> ETHERTYPE_IPV4 = 0x0800;
 const bit<8> IP_PROTO_ICMP   = 1;
 const bit<8> IP_PROTO_TCP    = 6;
 const bit<8> IP_PROTO_UDP    = 17;
+const bit<8> IP_PROTO_INT    = 20; //intentar poner un valor que no sea de algún protocolo que vaya a usar
 
 const mac_addr_t IPV6_MCAST_01 = 0x33_33_00_00_00_01;
 
@@ -395,8 +396,10 @@ control EgressPipeImpl (inout parsed_headers_t hdr,
                         inout standard_metadata_t standard_metadata) {
     apply {
 
-        hdr.int_header.egress_timestamp = (bit<64>) standard_metadata.egress_global_timestamp;
-        hdr.int_header.setValid();
+        if (hdr.ipv4.isValid()) { //Si la cabecera IPv4 es válida, introduzco cabecera INT
+            hdr.int_header.egress_timestamp = (bit<64>) standard_metadata.egress_global_timestamp;
+            hdr.int_header.setValid();
+        }
 
         if (standard_metadata.egress_port == CPU_PORT) {
             // *** TODO EXERCISE 4
