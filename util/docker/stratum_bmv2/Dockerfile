@@ -44,6 +44,8 @@ RUN install_packages $RUNTIME_DEPS
 
 COPY --from=builder /output /
 
+ADD ./shared /root
+
 ENV DOCKER_RUN true
 
 ENTRYPOINT []
