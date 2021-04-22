@@ -397,8 +397,8 @@ control EgressPipeImpl (inout parsed_headers_t hdr,
     apply {
 
         if (hdr.ipv4.isValid()) { //Si la cabecera IPv4 es válida, introduzco cabecera INT
-            hdr.int_header.egress_timestamp = (bit<64>) standard_metadata.egress_global_timestamp;
             hdr.int_header.setValid();
+            hdr.int_header.egress_timestamp = (bit<64>) standard_metadata.egress_global_timestamp;
         }
 
         if (standard_metadata.egress_port == CPU_PORT) {

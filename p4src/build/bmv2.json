@@ -910,6 +910,21 @@
       "runtime_data" : [],
       "primitives" : [
         {
+          "op" : "add_header",
+          "parameters" : [
+            {
+              "type" : "header",
+              "value" : "int_header"
+            }
+          ],
+          "source_info" : {
+            "filename" : "p4src/main.p4",
+            "line" : 400,
+            "column" : 12,
+            "source_fragment" : "hdr.int_header.setValid()"
+          }
+        },
+        {
           "op" : "assign",
           "parameters" : [
             {
@@ -936,24 +951,9 @@
           ],
           "source_info" : {
             "filename" : "p4src/main.p4",
-            "line" : 400,
-            "column" : 12,
-            "source_fragment" : "hdr.int_header.egress_timestamp = (bit<64>) standard_metadata.egress_global_timestamp"
-          }
-        },
-        {
-          "op" : "add_header",
-          "parameters" : [
-            {
-              "type" : "header",
-              "value" : "int_header"
-            }
-          ],
-          "source_info" : {
-            "filename" : "p4src/main.p4",
             "line" : 401,
             "column" : 12,
-            "source_fragment" : "hdr.int_header.setValid()"
+            "source_fragment" : "hdr.int_header.egress_timestamp = (bit<64>) standard_metadata.egress_global_timestamp"
           }
         }
       ]
@@ -1349,8 +1349,8 @@
           "source_info" : {
             "filename" : "p4src/main.p4",
             "line" : 400,
-            "column" : 44,
-            "source_fragment" : "= (bit<64>) standard_metadata.egress_global_timestamp; ..."
+            "column" : 12,
+            "source_fragment" : "hdr.int_header.setValid(); ..."
           },
           "key" : [],
           "match_type" : "exact",
