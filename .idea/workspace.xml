@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16d80025-0a24-41c4-9c4c-754084f845d8" name="Default Changelist" comment="">
+    <list default="true" id="fc9ed41b-2b66-4ec8-b006-2f747bd356d2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/resources/bmv2.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/bmv2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/target/classes/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/app/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/target/classes/bmv2.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/target/classes/bmv2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/target/ngsdn-tutorial-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/target/ngsdn-tutorial-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/target/ngsdn-tutorial-1.0-SNAPSHOT.oar" beforeDir="false" afterPath="$PROJECT_DIR$/app/target/ngsdn-tutorial-1.0-SNAPSHOT.oar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/target/oar/m2/org/onosproject/ngsdn-tutorial/1.0-SNAPSHOT/ngsdn-tutorial-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/target/oar/m2/org/onosproject/ngsdn-tutorial/1.0-SNAPSHOT/ngsdn-tutorial-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/p4src/main.p4" beforeDir="false" afterPath="$PROJECT_DIR$/p4src/main.p4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/leaf1/chassis-config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/leaf1/chassis-config.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/leaf1/pipe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/leaf1/pipe.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/leaf1/stratum_bmv2.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/leaf1/stratum_bmv2.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/leaf1/write-reqs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/leaf1/write-reqs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/leaf2/chassis-config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/leaf2/chassis-config.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/leaf2/pipe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/leaf2/pipe.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/leaf2/stratum_bmv2.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/leaf2/stratum_bmv2.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/leaf2/write-reqs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/leaf2/write-reqs.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,16 +19,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="isa" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="WARN_ABOUT_CRLF" value="false" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/app/src/main/java/org/onosproject/ngsdn/tutorial/Ipv6SimpleRoutingComponent.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/mininet/topo-v4.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/p4src/main.p4" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/mininet/netcfg.json" root0="FORCE_HIGHLIGHTING" />
-  </component>
-  <component name="ProjectId" id="1r9dfWCOE8kMTdzkw8zWlka3lCZ" />
+  <component name="ProjectId" id="1pec6Hr7PtMzX4SOSZSzqqUKbJ3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="flattenPackages" value="true" />
@@ -41,133 +38,76 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="16d80025-0a24-41c4-9c4c-754084f845d8" name="Default Changelist" comment="" />
-      <created>1618392342511</created>
+      <changelist id="fc9ed41b-2b66-4ec8-b006-2f747bd356d2" name="Default Changelist" comment="" />
+      <created>1615546820032</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1618392342511</updated>
+      <updated>1615546820032</updated>
     </task>
-    <task id="LOCAL-00001" summary="Version 0 - Sin editar el original">
-      <created>1618393552397</created>
+    <task id="LOCAL-00001" summary="Red FUNCIONAL de 6 switches BMv2 y 2 hosts (funcionan los pings)">
+      <created>1615547394296</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1618393552397</updated>
+      <updated>1615547394296</updated>
     </task>
-    <task id="LOCAL-00002" summary="Version 1 - NO INT - 1 switch 2 hosts, no funcionan pings">
-      <created>1618395825714</created>
+    <task id="LOCAL-00002" summary="Red FUNCIONAL de 6 switches BMv2 y 2 hosts (funcionan los pings)">
+      <created>1615660349226</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1618395825714</updated>
+      <updated>1615660349226</updated>
     </task>
-    <task id="LOCAL-00003" summary="Version 2 - NO INT - 2 switches 2 hosts, SÍ funcionan pings">
-      <created>1618400847353</created>
+    <task id="LOCAL-00003" summary="Red IPv4 FUNCIONAL de 6 switches BMv2 y 2 hosts (funcionan los pings)">
+      <created>1616494644309</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1618400847353</updated>
+      <updated>1616494644309</updated>
     </task>
-    <task id="LOCAL-00004" summary="Version 2.1 - NO INT - P4 simplificado">
-      <created>1618480581651</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1618480581651</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Version 2.2 - NO INT - P4 simplificado (NO IPv6) - comentado">
-      <created>1618567194646</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1618567194646</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Version 2.3 - NO INT - P4 simplificado (NO IPv6) - borrado">
-      <created>1618567648312</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1618567648312</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Version 2.4 - NO INT - nuevo Ipv6SimpleRoutingComponent.java">
-      <created>1618570275495</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1618570275495</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Version 3.0 - NO INT - 1 switch 2 hosts, SÍ funcionan pings">
-      <created>1618571322801</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1618571322801</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Version 4.0 - INT - p4 modificado (falta sender y receiver)">
-      <created>1618826912681</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1618826912681</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Version 4.1 - INT - sender y receiver prueba 1 OK (sin switches ni p4)">
-      <created>1619002797844</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1619002797844</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Version 4.1 - INT - sender y receiver prueba 2 OK (sin switches ni p4)">
-      <created>1619004756478</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1619004756478</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Version 4.2 - INT - sender y receiver prueba 2 OK (sin switches ni p4)">
-      <created>1619004942036</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1619004942036</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Version 5.0 - INT - sender y receiver + cabecera INT introducida por el switch">
-      <created>1619009981817</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1619009981817</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Version 5.0 - INT - sender y receiver + cabecera INT introducida por el switch">
-      <created>1619010149769</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1619010149769</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="PruebaINT/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Version 0 - Sin editar el original" />
-    <MESSAGE value="Version 1 - NO INT - 1 switch 2 hosts, no funcionan pings" />
-    <MESSAGE value="Version 2 - NO INT - 2 switches 2 hosts, SÍ funcionan pings" />
-    <MESSAGE value="Version 2.1 - NO INT - P4 simplificado" />
-    <MESSAGE value="Version 2.2 - NO INT - P4 simplificado (NO IPv6) - comentado" />
-    <MESSAGE value="Version 2.3 - NO INT - P4 simplificado (NO IPv6) - borrado" />
-    <MESSAGE value="Version 2.4 - NO INT - nuevo Ipv6SimpleRoutingComponent.java" />
-    <MESSAGE value="Version 3.0 - NO INT - 1 switch 2 hosts, SÍ funcionan pings" />
-    <MESSAGE value="Version 4.0 - INT - p4 modificado (falta sender y receiver)" />
-    <MESSAGE value="Version 4.1 - INT - sender y receiver prueba 1 OK (sin switches ni p4)" />
-    <MESSAGE value="Version 4.1 - INT - sender y receiver prueba 2 OK (sin switches ni p4)" />
-    <MESSAGE value="Version 4.2 - INT - sender y receiver prueba 2 OK (sin switches ni p4)" />
-    <MESSAGE value="Version 5.0 - INT - sender y receiver + cabecera INT introducida por el switch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 5.0 - INT - sender y receiver + cabecera INT introducida por el switch" />
+    <MESSAGE value="Red FUNCIONAL de 6 switches BMv2 y 2 hosts (funcionan los pings)" />
+    <MESSAGE value="Red IPv4 FUNCIONAL de 6 switches BMv2 y 2 hosts (funcionan los pings)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Red IPv4 FUNCIONAL de 6 switches BMv2 y 2 hosts (funcionan los pings)" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
